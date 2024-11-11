@@ -2,9 +2,69 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Цитаты</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #4a4a4a;
+        }
+        p {
+            font-size: 1.2em;
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+        strong {
+            color: #555;
+        }
+        em {
+            color: #777;
+        }
+        .quote-container {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 0 20px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #4a90e2;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #357ab8;
+        }
+    </style>
 </head>
 <body>
-
+    <div class="quote-container">
+        <h1>Цитаты</h1>
+        <p><strong>Original:</strong> "{{ quote }}"</p>
+        <p><strong>Translated:</strong> "{{ translated_quote }}"</p>
+        <p><em>- {{ translated_author}} ({{ author }})</em></p>
+        <form action="/" method="get">
+            <button type="submit">Следующая цитата</button>
+        </form>
+    </div>
 </body>
 </html>
